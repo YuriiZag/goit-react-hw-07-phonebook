@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FilterField } from './pages/contacts/contacts.styled';
+import { FilterField } from './contacts.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { update } from 'components/redux/filterSlice';
 
