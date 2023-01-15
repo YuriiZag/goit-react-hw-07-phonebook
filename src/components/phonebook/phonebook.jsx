@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'components/redux/operations';
 
 export const Phonebook = () => {
-  const contactsList = useSelector(getContactsList)
+  const {contactsList} = useSelector(getContactsList)
   const dispatch = useDispatch();
 
   const onSubmitHandler = evt => {
@@ -20,7 +20,6 @@ export const Phonebook = () => {
     const { name, number } = evt.currentTarget.elements;
     if (contactsList.length > 0) {
       const nameList = contactsList.map(contact => contact.name.toLowerCase());
-      console.log(nameList);
         if (!nameList.includes(name.value.toLowerCase())) {
           dispatch(
             addContacts({
